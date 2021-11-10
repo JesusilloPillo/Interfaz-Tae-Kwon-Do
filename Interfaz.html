@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Interfaz de Tae Kwon Do</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronómetro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+	<script src="https://use.fontawesome.com/5c8ea5e3fc.js"></script>
+</head>
+<body>
+    <h1><center>Tae Kwon Do</center></h1>
+	<p><center><input class="inicial" type="text" placeholder="Jugador 1" id="Jugador1">
+	<label>Vs</label>
+	<input class="inicial" type="text" placeholder="Jugador 2" id="Jugador2"></center>
+	<center><input class="ingreso" type="button" name="name" value="Ingresar Nombres" onclick="Ingresar()"></center>
+	<main>
+		<div class="rectangule">
+			<div class="boton">
+				<div id="nombre" class="rondas">Ronda:</div>
+				<div id="rondas" class="rondas">1</div>
+			</div>
+			<div class="boton">
+				<a href="#" class="fa fa-plus-square" aria-hidden="true" onclick="punto1()"></a>
+				<div id="marcador1" class="marcador">0</div>
+				<div id="marcador2" class="marcador">0</div>
+				<i href="#" class="fa fa-plus-square" aria-hidden="true" onclick="punto2()"></i>
+			</div>
+			<div class="boton">
+				<b href="#" class="fa fa-minus-square" aria-hidden="true" onclick="puntoNegativo1()"></b>
+				<div id="faltas1" class="faltas">0</div>
+				<div id="faltas2" class="faltas">0</div>
+				<b href="#" class="fa fa-minus-square" aria-hidden="true" onclick="puntoNegativo2()"></b>
+			</div>
+			<div class="boton">
+				<dd href="#" class="fa fa-fast-forward" aria-hidden="true" onclick="siguienteRonda()"></dd>
+				<dd href="#" class="fa fa-refresh" aria-hidden="true" onclick="reinicio()"></dd>
+				<dd href="#" class="fa fa-angle-double-down" aria-hidden="true" onclick="LlenarTabla()"></dd>
+			</div>
+		</div>
+	</main>
+    <main>
+        <div class="circle">
+            <div id="stopwatch" class="stopwatch">00:00</div>
+            <div class="buttons">
+                <div class="stop" onclick="stop()"></div>
+                <div id="play-pause" class="paused" onclick="playPause()"></div>
+            </div>
+        </div>
+        <div id="seconds-sphere" class="seconds-sphere"></div>
+    </main>
+	<center><table class="puntuacion">
+		<table border="1">
+		<tr>
+			<th>Round</th>
+			<th><div id="Participante1" class="controls">Nombre del 1er. Jugador</div></th>
+			<th><div id="Participante2" class="controls">Nombre del 2do. Jugador</div></th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td><div type="text" id="P1Num1" class="controls">Puntos 1era. Ronda</div></td>
+			<td><div id="P2Num1" class="controls">Puntos 1era. Ronda</div></td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td><div id="P1Num2" class="controls">Puntos 2da. Ronda</div></td>
+			<td><div id="P2Num2" class="controls">Puntos 2da. Ronda</div></td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td><div id="P1Num3" class="controls">Puntos 3era. Ronda</div></td>
+			<td><div id="P2Num3" class="controls">Puntos 3era. Ronda</div></td>
+		</tr>
+		<tr>
+			<th>Faltas</th>
+			<td><div id="P1F" class="controls">Numero Total de Faltas</div></td>
+			<td><div id="P2F" class="controls">Numero Total de Faltas</div></td>
+		</tr>
+	</table></center>
+	<br>
+	<center><input class="points" type="button" name="name" value="Limpiar Tabla" onclick="Limpiar()"></center>
+</body>
+</html>
